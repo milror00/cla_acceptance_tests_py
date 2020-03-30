@@ -1,5 +1,5 @@
-from features.pages.SeleniumPage import SeleniumPage
 from selenium.webdriver.common.by import By
+from features.pages.SeleniumPage import SeleniumPage
 
 class CLA_WebstartPage(SeleniumPage):
 
@@ -7,5 +7,4 @@ class CLA_WebstartPage(SeleniumPage):
         self.browser = context.browser
 
     def clickStartNow(self):
-        self.click(By.CLASS_NAME ,"govuk-button--start")
-    
+        self.click(By.CLASS_NAME, "govuk-button--start")

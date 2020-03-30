@@ -3,7 +3,6 @@ from selenium import webdriver
 from features.configuration.configuration import Configuration
 
 
-
 @fixture
 def selenium_browser(context):
     # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
@@ -17,4 +16,3 @@ def selenium_browser(context):
 
 def before_all(context):
     use_fixture(selenium_browser, context)
-

@@ -1,13 +1,10 @@
-
 class Configuration:
 
     def getEnvironment(self):
-         return  "LIVE"
-
+        return "LIVE"
 
     def getBrowserType(self):
-        return  "FIREFOX"
-
+        return "FIREFOX"
 
     def getBaseURI(self):
         return "https://www.gov.uk/check-legal-aid/"

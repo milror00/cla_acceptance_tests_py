@@ -1,5 +1,6 @@
-from features.pages.SeleniumPage import SeleniumPage
 from selenium.webdriver.common.by import By
+from features.pages.SeleniumPage import SeleniumPage
+
 
 
 class CLA_DebtAboutYouPage(SeleniumPage):
@@ -16,13 +17,13 @@ class CLA_DebtAboutYouPage(SeleniumPage):
     def clickDoYouReceiveBenefits_No(self):
         self.click(By.XPATH, ".//*[@id='on_benefits-1']")
 
-    def  clickDoYouHaveChildrenUnder15_No(self):
+    def clickDoYouHaveChildrenUnder15_No(self):
         self.click(By.XPATH, ".//*[@id='have_children-1']")
 
-    def  clickHaveDependentChildrenOver16_No(self):
+    def clickHaveDependentChildrenOver16_No(self):
         self.click(By.XPATH, ".//*[@id='have_dependants-1']")
 
-    def  clickDoYouOwnAProperty_No(self):
+    def clickDoYouOwnAProperty_No(self):
         self.click(By.XPATH, ".//*[@id='own_property-1']")
 
     def clickAreYouEmployed_No(self):
@@ -42,5 +43,5 @@ class CLA_DebtAboutYouPage(SeleniumPage):
 
     @property
     def verifyOnPage(self):
-        self.waitForPageLoaded(By.XPATH,"//*[contains(text(),'partner')]")
+        self.waitForPageLoaded(By.XPATH, "//*[contains(text(),'partner')]")
         return True

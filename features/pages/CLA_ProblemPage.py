@@ -1,5 +1,5 @@
-from features.pages.SeleniumPage import SeleniumPage
 from selenium.webdriver.common.by import By
+from features.pages.SeleniumPage import SeleniumPage
 
 
 class CLA_ProblemPage(SeleniumPage):
@@ -10,8 +10,7 @@ class CLA_ProblemPage(SeleniumPage):
     def clickDebt(self):
         self.click(By.XPATH, ".//*[@class='cla-scope-options-list']/li[3]/a")
 
-
     @property
     def verifyOnPage(self):
-        self.waitForPageLoaded(By.XPATH,"//*[contains(text(),'Debt')]")
+        self.waitForPageLoaded(By.XPATH, "//*[contains(text(),'Debt')]")
         return True
