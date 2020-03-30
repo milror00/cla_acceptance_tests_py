@@ -1,11 +1,16 @@
 from behave import given, when, then
+import unittest
 from features.configuration.configuration import Configuration
+from features.pages.CLA_DebtYourIncomePage import CLA_DebtYourIncomePage
 from features.pages.CLA_StartPage import CLA_WebstartPage
 from features.pages.CLA_ProblemPage import CLA_ProblemPage
 from features.pages.CLA_DebtChooseProblemPage import CLA_DebtChooseProblemPage
 from features.pages.CLA_LegalAidIsAvailablePage import CLA_LegalAidIsAvailablePage
 from features.pages.CLA_DebtAboutYouPage import CLA_DebtAboutYouPage
-
+from features.pages.CLA_DebtYourOutgoingsPage import CLA_DebtYourOutgoingsPage
+from features.pages.CLA_DebtReviewPage import CLA_DebtReviewPage
+from features.pages.CLA_LegalAidIsNotAvailablePage import CLA_LegalAidIsNotAvailablePage
+from features.pages.CLA_CallContactCentrePage import CLA_ContactCentrePage
 
 @given(u'I am on debt page')
 def step_impl(context):
@@ -116,76 +121,113 @@ def step_impl(context):
     page.clickContinueButton()
 
 
-@when(u'answer 0 to your maintenance received')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer 0 to your mainetnance received')
+@when(u'answer {number:d} to your maintenance received')
+def step_impl(context, number):
+    page = CLA_DebtYourIncomePage(context)
+    page.verifyOnPage
+    page.setYourIncome(str(number))
 
 
-@when(u'answer "per week" to your maintenance frequency')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer "per week" to your maintenance frequency')
+@when(u'answer "{text}" to your maintenance frequency')
+def step_impl(context, text):
+    page = CLA_DebtYourIncomePage(context)
+    page.verifyOnPage
+    page.setYourIncomeInterval(text)
 
 
-@when(u'answer 0 to your pension received')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer 0 to your pension received')
+@when(u'answer {number:d} to your pension received')
+def step_impl(context, number):
+    page = CLA_DebtYourIncomePage(context)
+    page.verifyOnPage
+    page.setYourPension(str(number))
 
 
-@when(u'answer "per week" to your pension frequency')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer "per week" to your pension frequency')
+@when(u'answer "{text}" to your pension frequency')
+def step_impl(context, text):
+    page = CLA_DebtYourIncomePage(context)
+    page.verifyOnPage
+    page.setYourPensionInterval(text)
 
 
-@when(u'answer 0 to your other income')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer 0 to your other income')
+@when(u'answer {number:d} to your other income')
+def step_impl(context, number):
+    page = CLA_DebtYourIncomePage(context)
+    page.verifyOnPage
+    page.setAnyOtherIncome(str(number))
 
 
-@when(u'answer "per week" to your other income frequency')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer "per week" to your other income frequency')
+@when(u'answer "{text}" to your other income frequency')
+def step_impl(context, text):
+    page = CLA_DebtYourIncomePage(context)
+    page.verifyOnPage
+    page.setAnyOtherIncomeInterval(text)
 
 
 @when(u'I click continue to Your outgoings page')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When I click continue to Your outgoings page')
+    page = CLA_DebtYourIncomePage(context)
+    page.verifyOnPage
+    page.clickContinue()
 
 
-@when(u'answer 0 to your rent amount')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer 0 to your rent amount')
+@when(u'answer {number:d} to your rent amount')
+def step_impl(context, number):
+    page = CLA_DebtYourOutgoingsPage(context)
+    page.verifyOnPage
+    page.setRent(str(number))
 
 
-@when(u'answer "per week" to your rent schedule')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer "per week" to your rent schedule')
+
+@when(u'answer "{text}" to your rent schedule')
+def step_impl(context, text):
+    page = CLA_DebtYourOutgoingsPage(context)
+    page.verifyOnPage
+    page.setRentInterval(text)
 
 
-@when(u'answer 0 to your maintenance payment')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer 0 to your maintenance payment')
+@when(u'answer {number:d} to your maintenance payment')
+def step_impl(context, number):
+    page = CLA_DebtYourOutgoingsPage(context)
+    page.verifyOnPage
+    page.setMaintenance(str(number))
 
 
-@when(u'answer "per week" to your maintenance payment schedule')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer "per week" to your maintenance payment schedule')
+@when(u'answer "{text}" to your maintenance payment schedule')
+def step_impl(context, text):
+    page = CLA_DebtYourOutgoingsPage(context)
+    page.verifyOnPage
+    page.setMaintenanceInterval(text)
 
 
-@when(u'answer 0 to your monthly income contribution order')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When answer 0 to your monthly income contribution order')
+@when(u'answer {number:d} to your monthly income contribution order')
+def step_impl(context, number):
+    page = CLA_DebtYourOutgoingsPage(context)
+    page.verifyOnPage
+    page.setIncomeContribution(str(number))
 
 
 @when(u'I click continue to review the answers page')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When I click continue to review the answers page')
+    page = CLA_DebtYourOutgoingsPage(context)
+    page.verifyOnPage
+    page.clickReviewYourAnswers()
 
 
-@when(u'I click reviewed questions')
+@when(u'I click reviewed answers')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When I click reviewed questions')
+    page = CLA_DebtReviewPage(context)
+    page.verifyOnPage
+    page.clickConfirm()
 
 
-@then(u'I get confirmed my eligibity is "eligible"')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Then I get confirmed my eligibity is "eligible"')
+@then(u'I get confirmed my eligibity is {text}')
+def step_impl(context,text):
+    if text == 'eligible':
+        print("eligible")
+        page = CLA_ContactCentrePage(context)
+        page.verifyOnPage
+        return True
+    else:
+        page1 = CLA_LegalAidIsNotAvailablePage(context)
+        page1.verifyOnPage
+        return False

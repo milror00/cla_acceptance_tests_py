@@ -8,3 +8,6 @@ class Configuration:
 
     def getBaseURI(self):
         return "https://www.gov.uk/check-legal-aid/"
+
+    def getTimeOut(self):
+        return 10

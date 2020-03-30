@@ -55,16 +55,16 @@ Scenario Outline: Yes I'm  a home owner at risk
           And answer <Q10> to your maintenance payment schedule
           And answer <Q11> to your monthly income contribution order
           And I click continue to review the answers page
-          And I click reviewed questions
+          And I click reviewed answers
           Then I get confirmed my eligibity is <elegibility>
 
 
           Examples:
 
-		     |Q1 |Q2        |Q3 |Q4        |Q5 |Q6        |Q7 |Q8        |Q9 |Q10       |Q11|elegibility    |
-		     |0  |"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |"eligible"     |
-#		     |100|"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |"eligible"     |
-#		     |100|"per week"|100|"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |"not eligible" |
+		     |Q1 |Q2        |Q3 |Q4        |Q5 |Q6        |Q7 |Q8        |Q9 |Q10       |Q11|elegibility  |
+		     |0  |"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |eligible     |
+		     |100|"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |eligible     |
+		     |100|"per week"|100|"per week"|0  |"per week"|0  |"per week"|0  |"per week"|0  |not eligible |
 	     
 
           
