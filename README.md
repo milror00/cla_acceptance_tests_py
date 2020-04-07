@@ -1,4 +1,4 @@
-#Civil Legal Aid Acceptance Tests - Python example
+# Civil Legal Aid Acceptance Tests - Python example
 
 This is an example project showing how to do an e2e test scenario using behave, selenium and python. It is the same project that was written in Java https://github.com/milror00/cla_acceptance_tests.
 
