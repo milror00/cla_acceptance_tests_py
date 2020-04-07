@@ -7,6 +7,7 @@ The current project is from a larger project that I completed for civil legal ai
 This project I tested on a windows 10 64 bit machine
 
 Firefox 74.0 64 bit
+
 Python 3.8
 
 I use the PyCharm Professional IDE to develop my project.
@@ -14,6 +15,7 @@ I use the PyCharm Professional IDE to develop my project.
 Install the following libraries:
 
 pip install behave
+
 pip install selenium
 
 or alternatively install from requirements.txt
