@@ -25,7 +25,5 @@ If the above are installed then:
 
 1. In your chosen IDE import this GIT project.
 
-2. cd to cla_acceptance_tests_py
-
-3. open a console and run behave ./features
+2. open a console and run behave ./features
 
