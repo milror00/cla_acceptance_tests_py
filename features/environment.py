@@ -9,7 +9,7 @@ def selenium_browser(context):
     # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
     config = Configuration()
     if config.getBrowserType() == "FIREFOX":
-        firefox_binary = FirefoxBinary('/usr/bin/geckodriver/')
+        firefox_binary = FirefoxBinary('/usr/bin/firefox')
         context.browser = webdriver.Firefox(firefox_binary=firefox_binary)
     yield context.browser
     # -- CLEANUP-FIXTURE PART:
